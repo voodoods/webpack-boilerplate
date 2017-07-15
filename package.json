@@ -1,0 +1,22 @@
+{
+  "name": "vtm-rpg",
+  "version": "1.0.0",
+  "description": "A Vampire - The Masquerade inspired, text based roleplay game. Walk the streets of Chicago as a creature of the night and try to survive the deception created by ruthless beasts and corrupt kindred politics.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/voodoods/vtm-rpg.git"
+  },
+  "author": "me@normansteger.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/voodoods/vtm-rpg/issues"
+  },
+  "homepage": "https://github.com/voodoods/vtm-rpg#readme",
+  "devDependencies": {
+    "webpack": "^3.3.0"
+  }
+}

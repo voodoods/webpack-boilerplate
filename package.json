@@ -4,7 +4,10 @@
   "description": "A Vampire - The Masquerade inspired, text based roleplay game. Walk the streets of Chicago as a creature of the night and try to survive the deception created by ruthless beasts and corrupt kindred politics.",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "start-js": "webpack-dev-server --compress --content-base --open",
+    "start": "npm-run-all -p start-js",
+    "build": "NODE_ENV=production webpack -p",
+    "test": ""
   },
   "repository": {
     "type": "git",
@@ -17,6 +20,16 @@
   },
   "homepage": "https://github.com/voodoods/vtm-rpg#readme",
   "devDependencies": {
-    "webpack": "^3.3.0"
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "eslint": "^4.2.0",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^2.29.0",
+    "npm-run-all": "^4.0.2",
+    "webpack": "^3.3.0",
+    "webpack-dev-server": "^2.5.1"
   }
 }

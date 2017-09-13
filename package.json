@@ -1,7 +1,7 @@
 {
   "name": "webpack-boilerplate",
   "version": "1.0.0",
-  "description": "A Vampire - The Masquerade inspired, text based roleplay game. Walk the streets of Chicago as a creature of the night and try to survive the deception created by ruthless beasts and corrupt kindred politics.",
+  "description": "A basic webpack project setup, packed with all kinds of useful goodies.",
   "main": "index.js",
   "scripts": {
     "start-js": "NODE_ENV=development webpack-dev-server --config config/webpack/dev.config.js",

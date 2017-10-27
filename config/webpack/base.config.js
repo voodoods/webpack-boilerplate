@@ -7,12 +7,6 @@ console.log(process.env.NODE_ENV)
 
 module.exports = {
   // global base config here
-  resolve: {
-    alias: {
-      'react': 'inferno-compat',
-      'react-dom': 'inferno-compat'
-    }
-  },
   context: path.resolve(__dirname, '../../src'),
   entry: {
     index: [
@@ -51,9 +45,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.EnvironmentPlugin([
-      'NODE_ENV'
-    ]),
     new HtmlWebpackPlugin({
       inject: true,
       template: path.resolve('src/index.html')

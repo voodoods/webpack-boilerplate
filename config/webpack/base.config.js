@@ -1,55 +1,49 @@
-const webpack = require('webpack')
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-
-console.log(process.env.NODE_ENV)
+const path = require("path");
 
 module.exports = {
-  // global base config here
-  context: path.resolve(__dirname, '../../src'),
+  context: path.resolve(__dirname, "../../src"),
   entry: {
-    index: [
-      './polyfills.js',
-      './index.js'
-    ]
+    index: ["./polyfills.js", "./index.js"]
   },
   output: {
-    path: path.resolve(__dirname, '../../dist'),
-    publicPath: '',
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, "../../dist"),
+    filename: "bundle.js"
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.jsx?$/,
-        exclude: [
-          /node_modules/,
-          /\.test\.js$/
-        ],
-        loader: 'babel-loader'
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: "babel-loader"
+        }
       },
       {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            { loader: 'css-loader', options: { importLoaders: 1 } }
-          ]
-        })
+        test: /\.(png|svg|jpg|gif)$/,
+        use: {
+          loader: "file-loader"
+        }
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
-        loader: 'file-loader'
+        use: {
+          loader: "file-loader"
+        }
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader"
+          },
+          {
+            loader: "sass-loader"
+          }
+        ]
       }
     ]
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      inject: true,
-      template: path.resolve('src/index.html')
-    }),
-    new ExtractTextPlugin('style.css'),
-    new webpack.optimize.ModuleConcatenationPlugin()
-  ]
-}
+  }
+};

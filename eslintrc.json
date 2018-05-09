@@ -1,4 +1,5 @@
 {
+  "extends": "8select",
   "rules": {
     "require-jsdoc": [
       "error",

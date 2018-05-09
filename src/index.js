@@ -1,1 +1,8 @@
-document.write("<h1>App is working!</h1>")
+import './polyfills'
+import './style.scss'
+
+export const addNumbers = (a, b) => a + b
+
+const root = document.createElement("div")
+root.innerHTML = `<p>Hello Webpack.</p>`
+document.body.appendChild(root)

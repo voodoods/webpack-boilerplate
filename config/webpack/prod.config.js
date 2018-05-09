@@ -1,18 +1,16 @@
-const webpack = require('webpack')
+const MinifyPlugin = require("babel-minify-webpack-plugin");
+const path = require("path");
 const merge = require('webpack-merge')
 const baseConfig = require('./base.config.js')
 
+const minifyOpts = undefined
+
+const pluginOpts = {
+  include: path.resolve(__dirname, "../../src"),
+}
+
 module.exports = merge(baseConfig, {
-  // prod config here
   plugins: [
-    new webpack.EnvironmentPlugin({
-       NODE_ENV: 'production'
-    })
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      compressor: {
-        warnings: false
-      }
-    })
+    new MinifyPlugin(minifyOpts, pluginOpts)
   ]
 })

@@ -1,14 +1,14 @@
 const merge = require('webpack-merge')
 const path = require('path')
 const baseConfig = require('./base.config.js')
-const webpack = require('webpack')
 
 module.exports = merge(baseConfig, {
-  // dev config here
+  mode: 'development',
   devServer: {
     contentBase: path.join(__dirname, '../../dist'),
     compress: false,
     port: 8080,
+    hot: true,
     overlay: {
       warnings: false,
       errors: true
@@ -17,10 +17,5 @@ module.exports = merge(baseConfig, {
       'Access-Control-Allow-Origin': '*'
     }
   },
-  devtool: 'source-maps',
-  plugins: [
-    new webpack.EnvironmentPlugin({
-      NODE_ENV: 'development'
-    })
-  ]
+  devtool: 'source-maps'
 })

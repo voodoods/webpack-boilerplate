@@ -8,7 +8,7 @@ A basic webpack project setup, packed with all kinds of useful goodies.
 - [Setup](#architecture)
 - [Contents](#contents)
 - [License](#license)
-- [Code of Conduct)(#code-of-conduct)
+- [Code of Conduct](#code-of-conduct)
 - [Contributing](#contributing)
 
 <!-- markdown-toc end -->
@@ -32,7 +32,7 @@ This setup comes with the follwing features:
 Feel free to fork this repo and modify it according to your needs. Leave me a note if you like this setup.
 
 ## Code of Conduct
-This repository contains the Open Source [Code of Conduct](code-of-conduct.md)
+This repository contains the Open Source [Code of Conduct](code-of-conduct.md).
 
 ## Contributing
 Check out our [contributing guide](CONTRIBUTING.md) for more details.

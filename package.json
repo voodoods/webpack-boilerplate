@@ -4,7 +4,7 @@
   "description": "A basic webpack project setup, packed with all kinds of useful goodies.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --watch --hot --inline --config config/webpack/dev.config.js",
+    "start": "webpack-dev-server --watch --hot --config config/webpack/dev.config.js",
     "build": "webpack --config config/webpack/prod.config.js",
     "test": "jest"
   },

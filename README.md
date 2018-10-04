@@ -1,6 +1,17 @@
 # webpack-boilerplate
 A basic webpack project setup, packed with all kinds of useful goodies.
 
+## Table of contents
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [Setup](#architecture)
+- [Contents](#contents)
+- [Contributing](#contributing)
+- [License](#license-usage)
+
+<!-- markdown-toc end -->
+
 ## Setup
 This setup uses [yarn](https://yarnpkg.com/lang/en/) as its package manager. Please make sure to have it installed and run `yarn` to be able to download all necessary packages. If you prefer [npm](https://www.npmjs.com/) you can just delete the `yarn.lock` file and run `npm install`.
 
@@ -16,5 +27,8 @@ This setup comes with the follwing features:
 - ES6 Support via [babeljs](https://babeljs.io/)
 - An EditorConfig setup
 
-## License / Usage
+## Contributing
+Check out our [contributing guide](CONTRIBUTING.md) for more details.
+
+## License
 Feel free to fork this repo and modify it according to your needs. Leave me a note if you like this setup.

@@ -9,3 +9,6 @@
 # debuginfo
 /npm-debug.log
 /yarn-error.log
+
+# misc
+.history

@@ -32,7 +32,7 @@ This setup comes with the follwing features:
 Feel free to fork this repo and modify it according to your needs. Leave me a note if you like this setup.
 
 ## Code of Conduct
-This repository contains the Open Source [Code of Conduct](code-of-conduct.md).
+This repository contains the Open Source [Code of Conduct](https://github.com/voodoods/webpack-boilerplate/blob/master/CODE_OF_CONDUCT.md).
 
 ## Contributing
 Check out our [contributing guide](CONTRIBUTING.md) for more details.

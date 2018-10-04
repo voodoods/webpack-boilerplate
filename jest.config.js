@@ -2,7 +2,10 @@ module.exports = {
   setupTestFrameworkScriptFile: '<rootDir>/config/jest/setupTests.js',
   collectCoverage: false,
   collectCoverageFrom: ['src/**/*.js'],
-  transform: {".*": "<rootDir>/node_modules/jest-css-modules"},
+  transform: {
+    "^.+\\.jsx?$": "babel-jest",
+    ".*": "<rootDir>/node_modules/jest-css-modules"
+  },
   moduleDirectories: ['node_modules'],
   moduleNameMapper: {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':

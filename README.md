@@ -16,5 +16,5 @@ This setup comes with the follwing features:
 - ES6 Support via [babeljs](https://babeljs.io/)
 - An EditorConfig setup
 
-## License / Usage
+## Usage
 Feel free to fork this repo and modify it according to your needs. Leave me a note if you like this setup.

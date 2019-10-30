@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   context: path.resolve(__dirname, "../../src"),
   entry: {
-    index: ["./polyfills.js", "./index.js"]
+    index: ["./index.js"]
   },
   output: {
     path: path.resolve(__dirname, "../../dist"),

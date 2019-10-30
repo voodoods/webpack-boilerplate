@@ -1,4 +1,3 @@
-import './polyfills'
 import './style.scss'
 
 export const addNumbers = (a, b) => a + b

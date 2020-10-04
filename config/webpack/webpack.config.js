@@ -1,7 +1,38 @@
+const MinifyPlugin = require("babel-minify-webpack-plugin");
 const path = require("path");
+const merge = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-module.exports = {
+const env = process.env.NODE_ENV || 'development'
+
+const environments = {
+  development: {
+    mode: 'development',
+    devServer: {
+      contentBase: path.join(__dirname, '../../dist'),
+      compress: false,
+      port: 8080,
+      hot: true,
+      overlay: {
+        warnings: false,
+        errors: true
+      },
+      headers: {
+        'Access-Control-Allow-Origin': '*'
+      }
+    },
+    devtool: 'source-maps'
+  },
+  production: {
+    plugins: [
+      new MinifyPlugin(undefined, {
+        include: path.resolve(__dirname, "../../src"),
+      })
+    ]
+  }
+}
+
+let baseConfig = {
   context: path.resolve(__dirname, "../../src"),
   entry: {
     index: ["./index.js"]
@@ -51,3 +82,5 @@ module.exports = {
     new HtmlWebpackPlugin()
   ]
 };
+
+module.exports = merge(baseConfig, environments[env]);

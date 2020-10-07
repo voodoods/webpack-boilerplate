@@ -1,8 +1,6 @@
-const merge = require('webpack-merge')
-const path = require('path')
-const baseConfig = require('./base.config.js')
+const path = require("path");
 
-module.exports = merge(baseConfig, {
+module.exports = {
   mode: 'development',
   devServer: {
     contentBase: path.join(__dirname, '../../dist'),
@@ -18,4 +16,4 @@ module.exports = merge(baseConfig, {
     }
   },
   devtool: 'source-maps'
-})
+}

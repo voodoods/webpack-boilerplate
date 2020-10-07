@@ -4,8 +4,8 @@
   "description": "A basic webpack project setup, packed with all kinds of useful goodies.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --watch --hot --config config/webpack/dev.config.js",
-    "build": "webpack --config config/webpack/prod.config.js",
+    "start": "webpack-dev-server --watch --hot --config config/webpack/webpack.config.js",
+    "build": "NODE_ENV=production webpack --config config/webpack/webpack.config.js",
     "test": "jest"
   },
   "repository": "git+ssh://git@github.com/voodoods/webpack-boilerplate.git",

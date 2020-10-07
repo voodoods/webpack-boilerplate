@@ -1,7 +1,11 @@
+const MinifyPlugin = require("babel-minify-webpack-plugin");
 const path = require("path");
+const merge = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-module.exports = {
+const env = process.env.NODE_ENV || 'development'
+
+let baseConfig = {
   context: path.resolve(__dirname, "../../src"),
   entry: {
     index: ["./index.js"]
@@ -51,3 +55,7 @@ module.exports = {
     new HtmlWebpackPlugin()
   ]
 };
+
+const environmentConfig = require(`./${env}.config.js`)
+
+module.exports = merge(baseConfig, environmentConfig);
